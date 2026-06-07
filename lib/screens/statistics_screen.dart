@@ -4,22 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../services/system_service.dart';
+import '../utils/app_colors.dart';
 import '../utils/app_sizes.dart';
 import '../widgets/notification_bell_button.dart';
 import 'history_screen.dart';
 import 'profile_screen.dart';
 
-const Color _primary = Color(0xFF8C0011);
-const Color _primaryContainer = Color(0xFFB01E23);
-const Color _secondary = Color(0xFF3B6934);
-const Color _tertiaryContainer = Color(0xFFB40B3C);
-const Color _error = Color(0xFFBA1A1A);
-const Color _surface = Color(0xFFFCF9F8);
-const Color _surfaceContainerLowest = Color(0xFFFFFFFF);
-const Color _surfaceContainerLow = Color(0xFFF6F3F2);
-const Color _onSurface = Color(0xFF1B1C1C);
-const Color _onSurfaceVariant = Color(0xFF5A403E);
-const Color _outlineVariant = Color(0xFFE3BEBB);
+const Color _primary = AppColors.primary;
+const Color _primaryContainer = AppColors.primaryContainer;
+const Color _secondary = AppColors.secondary;
+const Color _tertiaryContainer = AppColors.tertiaryContainer;
+const Color _error = AppColors.error;
+const Color _surface = AppColors.surface;
+const Color _surfaceContainerLowest = AppColors.surfaceContainerLowest;
+const Color _surfaceContainerLow = AppColors.surfaceContainerLow;
+const Color _onSurface = AppColors.onSurface;
+const Color _onSurfaceVariant = AppColors.onSurfaceVariant;
+const Color _outlineVariant = AppColors.outlineVariant;
 
 class StatisticsScreen extends StatefulWidget {
   final String? systemId;
@@ -1378,14 +1379,14 @@ class _BottomNavItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const activeColor = Color(0xFFB01E23);
+    const activeColor = _primaryContainer;
     final color = isSelected ? activeColor : _onSurfaceVariant;
 
     return Expanded(
       child: Center(
         child: Material(
           color: isSelected
-              ? const Color(0xFFFFDAD6).withValues(alpha: 0.3)
+              ? AppColors.navSelectedBg.withValues(alpha: 0.3)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(AppSizes.radiusM),
           child: InkWell(

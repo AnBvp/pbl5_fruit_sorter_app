@@ -1,52 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'app_colors.dart';
 import 'app_sizes.dart';
 
+/// Themed styles (gradients, shadows, text styles) built on top of the
+/// [AppColors] teal palette. Colors live in [AppColors]; this class only
+/// composes reusable visual styles.
 class AppTheme {
-  // Primary Colors - Modern Teal
-  static const Color primary = Color(0xFF006D5B);
-  static const Color primaryLight = Color(0xFFE0F2F1);
-  static const Color primaryDark = Color(0xFF004D40);
-  static const Color accent = Color(0xFFFF8F00);
-  static const Color error = Color(0xFFD32F2F);
-  static const Color warning = Color(0xFFFFA000);
-  static const Color success = Color(0xFF2E7D32);
-  static const Color info = Color(0xFF1976D2);
+  AppTheme._();
 
-  // Background
-  static const Color background = Color(0xFFF5F5F5);
-  static const Color surface = Colors.white;
-  static const Color cardColor = Colors.white;
+  // Colors (re-exported from AppColors for convenience)
+  static const Color primary = AppColors.primary;
+  static const Color primaryLight = AppColors.primaryLight;
+  static const Color primaryDark = AppColors.primaryDark;
+  static const Color accent = AppColors.primaryContainer;
+  static const Color error = AppColors.error;
+  static const Color warning = AppColors.warning;
+  static const Color success = AppColors.secondary;
+  static const Color info = AppColors.tertiaryContainer;
 
-  // Text
-  static const Color textPrimary = Color(0xFF212121);
-  static const Color textSecondary = Color(0xFF757575);
-  static const Color textHint = Color(0xFFBDBDBD);
+  static const Color background = AppColors.surface;
+  static const Color surface = AppColors.surfaceContainerLowest;
+  static const Color cardColor = AppColors.surfaceContainerLowest;
 
-  static const Color outlineVariant = Color(0xFFE3BEBB);
+  static const Color textPrimary = AppColors.onSurface;
+  static const Color textSecondary = AppColors.onSurfaceVariant;
+  static const Color textHint = Color(0xFF9AAFAB);
 
-  static const Color surfaceContainerLow = Color(0xFFF6F3F2);
-  static const Color tertiaryContainer = Color(0xFFB40B3C);
-  static const Color secondary = Color(0xFF3B6934);
+  static const Color outlineVariant = AppColors.outlineVariant;
+  static const Color secondary = AppColors.secondary;
 
   // Gradients
-  static final LinearGradient primaryGradient = LinearGradient(
+  static const LinearGradient primaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [primary, primaryDark],
+    colors: [AppColors.primary, AppColors.primaryDark],
   );
 
-  static final LinearGradient loginGradient = LinearGradient(
+  static const LinearGradient backgroundGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [primary, primaryDark, Color(0xFF00332A)],
+    colors: [AppColors.primaryLight, Colors.white],
   );
 
-  static final LinearGradient accentGradient = LinearGradient(
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-    colors: [accent, Color(0xFFFF6F00)],
+  static const LinearGradient loginGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [AppColors.primary, AppColors.primaryDark, Color(0xFF00261F)],
   );
 
   // Shadows
@@ -89,7 +90,10 @@ class AppTheme {
     color: textSecondary,
   );
 
-  static TextStyle bodySmall = GoogleFonts.inter(fontSize: AppSizes.fontCaption, color: textHint);
+  static TextStyle bodySmall = GoogleFonts.inter(
+    fontSize: AppSizes.fontCaption,
+    color: textHint,
+  );
 
   static TextStyle caption = GoogleFonts.inter(
     fontSize: AppSizes.fontCaption,

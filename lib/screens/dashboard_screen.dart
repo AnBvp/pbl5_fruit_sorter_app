@@ -7,7 +7,7 @@ import 'package:shimmer/shimmer.dart';
 import '../services/sse_service.dart';
 import '../services/system_service.dart';
 import '../utils/app_sizes.dart';
-import '../utils/theme.dart';
+import '../utils/app_theme.dart';
 
 const bool _showHardwareControls = false;
 
@@ -151,7 +151,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ? 'tạm dừng'
                 : 'dừng'} hệ thống',
           ),
-          backgroundColor: AppTheme.primaryGreen,
+          backgroundColor: AppTheme.primary,
           behavior: SnackBarBehavior.floating,
         ),
       );
@@ -221,7 +221,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: SafeArea(
           child: RefreshIndicator(
             onRefresh: _loadDashboardData,
-            color: AppTheme.primaryGreen,
+            color: AppTheme.primary,
             child: _isLoading
                 ? _buildShimmerLoading()
                 : _errorMessage.isNotEmpty
@@ -274,7 +274,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         const SizedBox(height: 96),
         Icon(Icons.info_outline, size: AppSizes.iconXXLarge, color: Colors.grey.shade500),
         const SizedBox(height: AppSizes.spacingL),
-        Text(message, textAlign: TextAlign.center, style: AppTheme.bodyStyle),
+        Text(message, textAlign: TextAlign.center, style: AppTheme.bodyMedium),
       ],
     );
   }
@@ -298,8 +298,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Fruit Sorter', style: AppTheme.headingStyle),
-            Text('Hệ thống phân loại thông minh', style: AppTheme.bodyStyle),
+            Text('Fruit Sorter', style: AppTheme.headlineMedium),
+            Text('Hệ thống phân loại thông minh', style: AppTheme.bodyMedium),
           ],
         ),
       ],
@@ -423,9 +423,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
           children: [
             Row(
               children: [
-                Icon(Icons.control_camera, color: AppTheme.primaryGreen),
+                Icon(Icons.control_camera, color: AppTheme.primary),
                 const SizedBox(width: AppSizes.spacingM),
-                Text('Điều khiển hệ thống', style: AppTheme.subheadingStyle),
+                Text('Điều khiển hệ thống', style: AppTheme.titleLarge),
               ],
             ),
             const SizedBox(height: AppSizes.spacingXL),

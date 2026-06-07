@@ -15,8 +15,8 @@ class AppSizes {
   static const double fontHeadlineMedium = 18.0;// was 22/24
   static const double fontTitleLarge = 16.0;    // was 18
   static const double fontTitleMedium = 14.0;   // was 16
-  static const double fontBody = 12.0;          // was 14
-  static const double fontCaption = 10.0;       // was 12
+  static const double fontBody = 13.0;          // was 14
+  static const double fontCaption = 11.0;       // was 12
 
   // Icon Sizes
   static const double iconSmall = 16.0;  // was 20

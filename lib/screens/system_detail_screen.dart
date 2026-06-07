@@ -5,27 +5,28 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../services/sse_service.dart';
 import '../services/system_service.dart';
+import '../utils/app_colors.dart';
 import '../utils/app_sizes.dart';
 import '../widgets/notification_bell_button.dart';
 import 'history_screen.dart';
 import 'profile_screen.dart';
 import 'statistics_screen.dart';
 
-const Color _primary = Color(0xFF8C0011);
-const Color _primaryContainer = Color(0xFFB01E23);
-const Color _secondary = Color(0xFF3B6934);
-const Color _secondaryContainer = Color(0xFFB9EEAB);
-const Color _onSecondaryContainer = Color(0xFF3F6D38);
-const Color _error = Color(0xFFBA1A1A);
-const Color _errorContainer = Color(0xFFFFDAD6);
-const Color _onErrorContainer = Color(0xFF93000A);
-const Color _surface = Color(0xFFFCF9F8);
-const Color _surfaceContainerLowest = Color(0xFFFFFFFF);
-const Color _surfaceContainerLow = Color(0xFFF6F3F2);
-const Color _surfaceVariant = Color(0xFFE5E2E1);
-const Color _onSurface = Color(0xFF1B1C1C);
-const Color _onSurfaceVariant = Color(0xFF5A403E);
-const Color _outlineVariant = Color(0xFFE3BEBB);
+const Color _primary = AppColors.primary;
+const Color _primaryContainer = AppColors.primaryContainer;
+const Color _secondary = AppColors.secondary;
+const Color _secondaryContainer = AppColors.secondaryContainer;
+const Color _onSecondaryContainer = AppColors.onSecondaryContainer;
+const Color _error = AppColors.error;
+const Color _errorContainer = AppColors.errorContainer;
+const Color _onErrorContainer = AppColors.onErrorContainer;
+const Color _surface = AppColors.surface;
+const Color _surfaceContainerLowest = AppColors.surfaceContainerLowest;
+const Color _surfaceContainerLow = AppColors.surfaceContainerLow;
+const Color _surfaceVariant = AppColors.surfaceVariant;
+const Color _onSurface = AppColors.onSurface;
+const Color _onSurfaceVariant = AppColors.onSurfaceVariant;
+const Color _outlineVariant = AppColors.outlineVariant;
 const bool _showHardwareControls = false;
 
 class SystemDetailScreen extends StatefulWidget {
@@ -746,7 +747,7 @@ class _SystemBottomNavItem extends StatelessWidget {
       child: Center(
         child: Material(
           color: isSelected
-              ? const Color(0xFFFFDAD6).withValues(alpha: 0.3)
+              ? AppColors.navSelectedBg.withValues(alpha: 0.3)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(AppSizes.radiusM),
           child: InkWell(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/auth_service.dart';
+import '../utils/app_colors.dart';
 import '../utils/app_sizes.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,15 +12,15 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  static const Color _primary = Color(0xFF8C0011);
-  static const Color _primaryContainer = Color(0xFFB01E23);
-  static const Color _surface = Color(0xFFFCF9F8);
-  static const Color _surfaceContainerLow = Color(0xFFF6F3F2);
-  static const Color _surfaceContainerLowest = Color(0xFFFFFFFF);
-  static const Color _surfaceTint = Color(0xFFB62326);
-  static const Color _onBackground = Color(0xFF1B1C1C);
-  static const Color _onSurfaceVariant = Color(0xFF5A403E);
-  static const Color _outlineVariant = Color(0xFFE3BEBB);
+  static const Color _primary = AppColors.primary;
+  static const Color _primaryContainer = AppColors.primaryContainer;
+  static const Color _surface = AppColors.surface;
+  static const Color _surfaceContainerLow = AppColors.surfaceContainerLow;
+  static const Color _surfaceContainerLowest = AppColors.surfaceContainerLowest;
+  static const Color _surfaceTint = AppColors.surfaceTint;
+  static const Color _onBackground = AppColors.onBackground;
+  static const Color _onSurfaceVariant = AppColors.onSurfaceVariant;
+  static const Color _outlineVariant = AppColors.outlineVariant;
 
   final _formKey = GlobalKey<FormState>();
   final _identifierController = TextEditingController();
@@ -454,7 +455,7 @@ class _LoginScreenState extends State<LoginScreen> {
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFF8A002A), Color(0xFF3B6934)],
+                colors: [AppColors.primary, AppColors.secondary],
               ),
               boxShadow: [
                 BoxShadow(
