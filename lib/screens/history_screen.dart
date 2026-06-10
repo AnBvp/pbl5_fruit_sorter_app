@@ -978,7 +978,7 @@ class _HistoryBottomNav extends StatelessWidget {
     return SafeArea(
       top: false,
       child: Container(
-        height: 64,
+        height: 68,
         padding: const EdgeInsets.symmetric(horizontal: AppSizes.spacingXL, vertical: AppSizes.spacingS),
         decoration: BoxDecoration(
           color: _surfaceContainerLowest,
